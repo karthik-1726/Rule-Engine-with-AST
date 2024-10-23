@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rule Engine</title>
+    <script src="{{url_for('static',filename='js/script.js')}}" defer></script>
+</head>
+<body>
+    <h1>Rule Engine</h1>
+
+    <div>
+        <h2>Create Rule</h2>
+        <input type="text" id="ruleInput" placeholder="Enter rule">
+        <button onclick="createRule()">Create Rule</button>
+        <p id="ruleError" style="color: red;"></p>
+    </div>
+
+    <div>
+        <h2>Combine Rules</h2>
+        <textarea id="rulesInput" placeholder="Enter rules separated by newline"></textarea>
+        <button onclick="combineRules()">Combine Rules</button>
+        <p id="combineError" style="color: red;"></p>
+    </div>
+
+    <div>
+        <h2>Evaluate Rule</h2>
+        <textarea id="dataInput" placeholder="Enter JSON data"></textarea>
+        <textarea id="astInput" placeholder="Enter AST JSON"></textarea>
+        <button onclick="evaluateRule()">Evaluate Rule</button>
+        <p id="evaluateError" style="color: red;"></p>
+    </div>
+
+    <div id="result"></div>
+</body>
+</html>
